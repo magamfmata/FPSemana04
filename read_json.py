@@ -1,16 +1,15 @@
 import json
 
-file=str(input())
+
 
 try:
-    file=open("data.json", "rt")
+    caminho = input()
+    file=open(caminho, "rt", encoding= "utf-8")
     json_data=file.read()
-
     data=json.loads(json_data)
-        
-    print(data)
-
+    print(data)  
+    file.close()
 except:
-    print("Ocorreu um erro")
+    print("Ocorreu um erro! ")
 finally:
-    print("Processo concluído!")
+    print("Processo concluído! ")
